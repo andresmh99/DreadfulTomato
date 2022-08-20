@@ -1,0 +1,45 @@
+.navBar{
+
+    background-color: #000;
+    height: 80px;
+  
+}
+.navBar-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.navBar ul{
+    display: flex;
+    list-style: none;
+    height: 80px;
+}
+.navBar ul li{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 5px 0;
+    padding: 5px;
+    color: #fff;
+    padding: 10px;
+    cursor: pointer;
+}
+.navBar ul li img{
+    margin: 5px;
+}
+.navBar ul li a{
+    text-decoration: none;
+    color: #fff;
+    padding: 10px;
+}
+
+.active{
+    background-color: #c61914;
+}
+.btn-start{
+    background-color: #c61914;
+    color: #fff;
+    border-radius: 20px;
+    cursor: pointer;
+}

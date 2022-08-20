@@ -1,0 +1,28 @@
+<form class="form-search">
+    <div class="div-search">
+        <input (keyup)="search()" [(ngModel)]="searchMovie" class="input-search"  type="search" placeholder="Name" aria-label="Search">
+        <input type="date" min="1900" max="2099" step="1" value="2016" class="input-search-date">
+    </div>
+</form>
+<main>
+    <div class="container">
+        <h1 class="title">Popular Movies</h1>
+        <div class="grid">
+            <div *ngFor="let movie of dataMovies" class="card">
+                <a (click)="getOficialPage(movie.id)"><img src="https://image.tmdb.org/t/p/w300{{movie.poster_path}}" alt="{{movie.title}}"></a>
+                <p class="title-movie" (click)="viewDescription(movie.id)">{{movie.title}}</p>
+                <div  class="card-movie" *ngIf="movie.id===idMovie && description==true" [class.active]="description" (click)="viewDescription(movie.id)">
+                    <p><strong>{{movie.title}}</strong></p>
+                    <p>{{movie.release_date}}</p>
+                    <i class="bi bi-calendar4"></i>
+                    <p>{{movie.overview}} </p>
+                </div>
+            </div>
+        </div>
+        <div class="div-buttons">
+            <button type="button" class="btn-page" (click)="previousPage()">Previous Page</button>
+            <button type="button" class="btn-page" (click)="nextPage()">Next Page</button>
+        </div>
+        
+    </div>
+</main>

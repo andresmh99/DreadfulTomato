@@ -1,0 +1,27 @@
+<form class="form-search">
+    <div class="div-search">
+        <input (keyup)="search()" [(ngModel)]="searchSerie" class="input-search"  type="search" placeholder="Name" aria-label="Search">
+        <input type="date" class="input-search-date">
+    </div>
+</form>
+<main>
+    <div class="container">
+        <h1 class="title">Popular Series</h1>
+        <div class="grid">
+            <div *ngFor="let serie of dataSeries" class="card">
+                <a (click)="getOficialPage(serie.id)"><img src="https://image.tmdb.org/t/p/w300{{serie.poster_path}}" alt="{{serie.name}}"></a>
+                <p class="title-movie" (click)="viewDescription(serie.id)">{{serie.name}}</p>
+                <div  class="card-movie" *ngIf="serie.id===idSerie && description==true" [class.active]="description" (click)="viewDescription(serie.id)">
+                    <p><strong>{{serie.name}}</strong></p>
+                    <p>{{serie.release_date}}</p>
+                    <i class="bi bi-calendar4"></i>
+                    <p>{{serie.overview}} </p>
+                </div>
+            </div>
+        </div>
+        <div class="div-buttons">
+            <button type="button" class="btn-page" (click)="previousPage()">Previous Page</button>
+            <button type="button" class="btn-page" (click)="nextPage()">Next Page</button>
+        </div>
+    </div>
+</main>

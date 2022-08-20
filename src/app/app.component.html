@@ -1,0 +1,59 @@
+<div class="body">
+    <nav class="navBar">
+        <div class="navBar-container">
+            <ul>
+                <li>
+                    <a routerLink="home"><img src="{{imgLogo}}" alt="Dreadful Tomato"></a>
+                </li>
+                <li routerLinkActive="active" routerLink="movies">
+                    <img src="{{iconMovie}}" alt="Movies">
+                    Movies
+                </li>
+                <li routerLinkActive="active" routerLink="series">
+                    <img src="{{iconSeries}}" alt="Series">
+                    Series
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <img src="{{iconFilters}}" alt="Filters">
+                    <a href="">Filters</a>
+                </li>
+                <li>
+                    <img src="{{iconLogin}}" alt="Login">
+                    <a href="">Login</a>
+                </li>
+                <li>
+                    <a type="button" class="btn-start">Start your free trial</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <app-header *ngIf=" "></app-header>
+    <router-outlet></router-outlet>
+    <footer>
+        <img src="{{imgLogo}}" alt="Dreadful Tomato" routerLink="home">
+        <ul class="footer-list">
+            <li>
+                <a routerLink="home">Home</a>
+            </li>
+            <li>
+                <a href="">Term of Use</a>
+            </li>
+            <li>
+                <a href="">Legal Notice</a>
+            </li>
+            <li>
+                <a href="">Help</a>
+            </li>
+            <li>
+                <a href="">Manage Account</a>
+            </li>
+        </ul>
+        <div>
+            <img src="{{imgAppStore}}" alt="AppStore">
+            <img src="{{imgGooglePlay}}" alt="GooglePlay">
+        </div>
+        <p>Copyright 2020 Dreadful Tomato Streaming All Rights Reserved</p>
+    </footer>
+</div>

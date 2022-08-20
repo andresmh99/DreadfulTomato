@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.home-container {
+  font-family: "Rubik", sans-serif;
+  display: flex;
+  width: 100%;
+  height: 80%;
+}
+
+.home-container .div-posters {
+  width: 50%;
+  overflow: hidden;
+  position: relative;
+}
+
+.home-container img {
+  width: 100%;
+}
+
+.home-container .div-posters .div-title {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  background-color: rgba(198, 25, 20, 0.8);
+  height: 15%;
+  cursor: pointer;
+}
+
+.home-container .div-posters .div-title p {
+  text-align: center;
+  color: #fff;
+  margin: 20px;
+  font-size: 3rem;
+  font-weight: bold;
+}/*# sourceMappingURL=home.component.css.map */
